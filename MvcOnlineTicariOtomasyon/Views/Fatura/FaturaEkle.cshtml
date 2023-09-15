@@ -1,0 +1,35 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Faturalar
+@{
+    ViewBag.Title = "FaturaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Fatura Sayfası</h2>
+<br />
+
+<form class="form-group" method="post">
+
+    <span class="font-weight-bold">Fatur Seri No</span>
+    @Html.TextBoxFor(x => x.FaturaSeriNo, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Fatura Sıra No</span>
+    @Html.TextBoxFor(x => x.FaturaSıraNo, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Vergi Dairesi</span>
+    @Html.TextBoxFor(x => x.VergiDairesi, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Tarih</span>
+    @Html.TextBoxFor(x => x.FaturaTarih, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Saat</span>
+    @Html.TextBoxFor(x => x.saat, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Teslim Eden</span>
+    @Html.TextBoxFor(x => x.TeslimEden, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Teslim Alan</span>
+    @Html.TextBoxFor(x => x.TeslimAlan, new { @class = "form-control", style = "margin-top:10px;" })
+
+    <button class="btn btn-primary" style="margin-top:20px;">Kaydet</button>
+</form>

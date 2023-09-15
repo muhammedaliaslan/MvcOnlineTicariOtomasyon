@@ -1,0 +1,39 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Urun
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Ürün Günelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.UrunID)
+    <span class="font-weight-bold">Ürün Adı</span>
+    @Html.TextBoxFor(x => x.UrunAd, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Marka</span>
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Stok</span>
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Alış Fiyat</span>
+    @Html.TextBoxFor(x => x.AlisFiyati, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Satış Fiyat</span>
+    @Html.TextBoxFor(x => x.SatisFiyati, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Kategori</span>
+    @Html.DropDownListFor(x => x.Kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+
+    @*@Html.TextBoxFor(x => x.Kategoriid, new { @class = "form-control", style = "margin-top:10px;" })*@
+    <br />
+    <span class="font-weight-bold">UrunGorsel</span>
+    @Html.TextBoxFor(x => x.UrunGorsel, new { @class = "form-control", style = "margin-top:10px;" })
+    <br />
+    <span class="font-weight-bold">Durum</span>
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control", style = "margin-top:10px;" })
+
+    <button class="btn btn-warning" style="margin-top:20px;">Güncelle</button>
+}
